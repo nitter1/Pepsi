@@ -19,7 +19,7 @@ export default function Main(props, largeCan) {
             perferendis molestias a unde eum dolorem officia doloremque!
             Doloribus asperiores quas vitae quisquam libero.
           </p>
-          <button style={{ color: props.letterColor }}>VIEW ALL PRODUCTS</button>
+          <button id="but" style={{ color: props.letterColor }}>VIEW ALL PRODUCTS</button>
         </S.TextBox>
         <S.Divfigure>
         <img src={props.largeCan} alt="pepsi001.png" width="225px" />

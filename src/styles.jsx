@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 export const Container = styled.section`
   background-color: #0261bf;
   height: 99.9vh;
-  width: 98.7vw;
+  width: 100vw;
 }
 `;
 

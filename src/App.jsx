@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import * as S from "./styles";
 import Main from "./Components/Main/Main";
 import HeaderComponent from "./Components/Header/Header";
@@ -10,6 +10,12 @@ export default function Pepsi(props) {
   const [background, setBackground] = useState("#0261bf");
   const [letterColor, setLetterColor] = useState("black");
   const [largeCan, setLargeCan] = useState(PepsiOne);
+  const bodyRef = useRef(document.body);
+
+  function alterarCorDeFundo(cor) {
+    bodyRef.current.style.backgroundColor = cor
+    bodyRef.current.style.transition = "1s";
+  }
 
   return (
     <S.Container
@@ -32,6 +38,7 @@ export default function Pepsi(props) {
             setBackground("#0261BF");
             setLetterColor("black");
             setLargeCan(PepsiOne);
+            alterarCorDeFundo("#0261BF")
           }}
         />
 
@@ -44,6 +51,7 @@ export default function Pepsi(props) {
             setBackground("darkred");
             setLetterColor("black");
             setLargeCan(PepsiTwo);
+            alterarCorDeFundo("darkred")
           }}
         />
 
@@ -52,6 +60,7 @@ export default function Pepsi(props) {
             setBackground("#1F1E1F");
             setLetterColor("black");
             setLargeCan(PepsiThree);
+            alterarCorDeFundo("#1F1E1F")
           }}
           className="latas"
           src={PepsiThree}
